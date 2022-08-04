@@ -107,3 +107,6 @@ forge test --match-path src/test/UUPSProxy.t.sol
 - [Proxies Overview](https://docs.openzeppelin.com/contracts/3.x/api/proxy#UpgradeableProxy)
 - [openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts)
 - [openzeppelin-contracts-upgradeable](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/tree/master/contracts)
+
+### Suggestions
+Building the old and new version of the implementation contract with `forge build --extra-output storageLayout` with add a field called `"storage"` to the output json. It would be trivial to check the storage consistency with that property since it gives the slot number and label.
